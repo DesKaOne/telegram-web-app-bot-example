@@ -464,7 +464,7 @@
 
         // actions
         sendMessage(msg_id, with_webview) {
-            if (!DemoApp.initDataUnsafe.query_id) {
+            if (!DemoApp.Unsafe.query_id) {
                 alert('WebViewQueryId not defined');
                 return;
             }
@@ -543,6 +543,7 @@
             }
         },
         checkInitData() {
+            console.log(DemoApp.initData);
             const webViewStatus = document.querySelector('#webview_data_status');
             if (DemoApp.initDataUnsafe.query_id &&
                 DemoApp.initData &&
