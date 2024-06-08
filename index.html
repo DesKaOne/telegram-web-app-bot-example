@@ -392,8 +392,8 @@
             <li><a href="javascript:;" onclick="prompt('How old are you?');">prompt</a></li>
         </ul>
         <ul>
-            <li><a href="javascript:;" onclick="DemoApp.showAlert(string(DemoApp.initData));">showAlert</a></li>
-            <li><a href="javascript:;" onclick="DemoApp.showConfirm(string(DemoApp.initDataUnsafe.query_id));">showConfirm</a></li>
+            <li><a href="javascript:;" onclick="DemoApp.showAlert(`${DemoApp.initData}`);">showAlert</a></li>
+            <li><a href="javascript:;" onclick="DemoApp.showConfirm(`${DemoApp.initDataUnsafe.query_id}`);">showConfirm</a></li>
             <li><a href="javascript:;" onclick="DemoApp.requestWriteAccess();">requestWriteAccess</a></li>
             <li><a href="javascript:;" onclick="DemoApp.requestContact();">requestContact</a></li>
             <li><a href="javascript:;" onclick="DemoApp.showPopup();">showPopup</a></li>
