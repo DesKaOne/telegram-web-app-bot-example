@@ -392,8 +392,8 @@
             <li><a href="javascript:;" onclick="prompt('How old are you?');">prompt</a></li>
         </ul>
         <ul>
-            <li><a href="javascript:;" onclick="DemoApp.showAlert(`${DemoApp.initData}`);">showAlert</a></li>
-            <li><a href="javascript:;" onclick="DemoApp.showConfirm(`${DemoApp.initDataUnsafe.query_id}`);">showConfirm</a></li>
+            <li><a href="javascript:;" onclick="DemoApp.showAlert('Hello!');">showAlert</a></li>
+            <li><a href="javascript:;" onclick="DemoApp.showConfirm('Are you sure?');">showConfirm</a></li>
             <li><a href="javascript:;" onclick="DemoApp.requestWriteAccess();">requestWriteAccess</a></li>
             <li><a href="javascript:;" onclick="DemoApp.requestContact();">requestContact</a></li>
             <li><a href="javascript:;" onclick="DemoApp.showPopup();">showPopup</a></li>
@@ -464,7 +464,7 @@
 
         // actions
         sendMessage(msg_id, with_webview) {
-            if (!DemoApp.Unsafe.query_id) {
+            if (!DemoApp.initDataUnsafe.query_id) {
                 alert('WebViewQueryId not defined');
                 return;
             }
@@ -543,7 +543,6 @@
             }
         },
         checkInitData() {
-            console.log(DemoApp.initData);
             const webViewStatus = document.querySelector('#webview_data_status');
             if (DemoApp.initDataUnsafe.query_id &&
                 DemoApp.initData &&
